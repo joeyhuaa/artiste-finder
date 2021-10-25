@@ -92,7 +92,9 @@ export default function Authenticated() {
               <MainLabel>{song.full_title}</MainLabel>
               <SubLabel>{song.api_path}</SubLabel>
               <SubLabel style={{ color: '#008eff' }}>
-                <Link href={`https://genius.com/${song.path}`}>{song.path}</Link>
+                <a href={`https://genius.com${song.path}`} target='_blank'>
+                  {song.path}
+                </a>
               </SubLabel>
             </Song>
           )
